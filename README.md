@@ -46,3 +46,37 @@ External APIs: Weather API
 ## System Architecture
 
 Worker App → Registration System → Backend Server → AI Risk Model → Disruption Monitoring (Weather API / Pollution API) → Claim Processing → Fraud Detection → Payout System → Worker Receives Compensation
+
+
+## Delivery Worker Persona
+
+Name: Rahul  
+Age: 26  
+Occupation: Food Delivery Partner (Swiggy)
+
+Rahul works 8–10 hours daily delivering food in urban areas. His income depends on the number of deliveries he completes each day. During heavy rain, extreme heat, or high pollution levels, Rahul is unable to work efficiently and often loses income.
+
+Our platform helps workers like Rahul by providing a weekly insurance plan that automatically compensates them when environmental disruptions prevent them from working.
+
+
+
+## Weekly Premium Model
+
+Our platform provides affordable weekly insurance plans for delivery workers.
+
+Example plan:
+
+Basic Plan
+Premium: ₹30 per week
+Coverage: Up to ₹500 payout during disruptions
+
+Premium Plan
+Premium: ₹50 per week
+Coverage: Up to ₹1000 payout during disruptions
+
+The premium is calculated using an AI-based risk model that considers:
+
+- Location risk
+- Historical weather patterns
+- Pollution levels
+- Delivery activity hours
