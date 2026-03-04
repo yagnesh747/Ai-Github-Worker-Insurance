@@ -1,33 +1,15 @@
-# AI Gig Worker Insurance
+## System Workflow
 
-## Problem
-Gig delivery workers often lose income due to heavy rain, extreme heat, pollution, or other disruptions.
+1. Worker registers on the platform with details like name, location, and delivery platform.
 
-## Solution
-This project builds an AI-powered parametric insurance system that automatically detects disruptions and provides instant payouts to protect workers’ weekly income.
+2. The system uses AI to calculate a weekly insurance premium based on risk factors such as weather conditions and location.
 
-## Features
-- AI-based risk prediction
-- Dynamic weekly premium calculation
-- Automatic disruption detection
-- Fraud detection
-- Instant claim payout
+3. Once the worker purchases the weekly plan, the insurance policy becomes active.
 
-## Tech Stack
-Frontend: React / HTML  
-Backend: Python FastAPI  
-Database: MongoDB  
-AI/ML: Python, Scikit-learn  
-APIs: Weather API
+4. The platform continuously monitors environmental disruptions such as heavy rain, extreme heat, and pollution using weather APIs.
 
-## Workflow
-1. Worker registers on the platform
-2. AI calculates weekly premium
-3. System monitors disruptions (weather, pollution etc.)
-4. If disruption occurs, claim triggers automatically
-5. Worker receives instant payout
+5. If a disruption occurs (for example rainfall > 50mm), the system automatically triggers a claim.
 
-## Future Scope
-- Advanced fraud detection
-- Real-time risk analytics
-- Mobile application support
+6. Fraud detection verifies the worker’s location and activity.
+
+7. If the claim is valid, the system processes an automatic payout to compensate for the worker’s lost income.
