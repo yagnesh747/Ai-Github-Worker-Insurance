@@ -43,23 +43,6 @@ External APIs: Weather API
 - Real-time analytics dashboard
 - Integration with payment gateways
 
-- ## System Architecture
+## System Architecture
 
-Delivery Worker App
-        ↓
-Registration & Authentication
-        ↓
-Backend Server (API Layer)
-        ↓
-AI Risk Prediction Model
-        ↓
-Disruption Monitoring System
-(Weather API / Pollution API)
-        ↓
-Claim Processing Engine
-        ↓
-Fraud Detection System
-        ↓
-Payout Processing System
-        ↓
-Worker Receives Compensation
+Worker App → Registration System → Backend Server → AI Risk Model → Disruption Monitoring (Weather API / Pollution API) → Claim Processing → Fraud Detection → Payout System → Worker Receives Compensation
