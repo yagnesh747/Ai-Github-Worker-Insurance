@@ -42,3 +42,24 @@ External APIs: Weather API
 - Mobile application for workers
 - Real-time analytics dashboard
 - Integration with payment gateways
+
+- ## System Architecture
+
+Delivery Worker App
+        ↓
+Registration & Authentication
+        ↓
+Backend Server (API Layer)
+        ↓
+AI Risk Prediction Model
+        ↓
+Disruption Monitoring System
+(Weather API / Pollution API)
+        ↓
+Claim Processing Engine
+        ↓
+Fraud Detection System
+        ↓
+Payout Processing System
+        ↓
+Worker Receives Compensation
