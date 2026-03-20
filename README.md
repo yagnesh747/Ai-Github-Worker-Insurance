@@ -80,3 +80,43 @@ The premium is calculated using an AI-based risk model that considers:
 - Historical weather patterns
 - Pollution levels
 - Delivery activity hours
+
+- ## Adversarial Defense & Anti-Spoofing Strategy
+
+### 1. Differentiation: Identifying Real vs Fake Claims
+
+Instead of trusting only GPS data, our system uses a combination of signals to understand whether a delivery partner is genuinely stuck or trying to manipulate the system.
+
+We look at movement patterns from device sensors like accelerometer and gyroscope to check if the user is actually moving or just sitting idle. We also compare the user’s location with real-time weather data to confirm whether the claimed weather conditions actually exist in that area.
+
+Additionally, our system learns normal delivery behavior over time (such as routes, speed, and stops). If a claim shows unusual or unrealistic patterns, it is flagged for further verification.
+
+This approach helps us distinguish between genuine situations and artificially generated ones.
+
+### 2. Data Points Used Beyond GPS
+
+To make the system more reliable, we analyze multiple data sources instead of depending only on GPS:
+
+- Network-based location (IP address and nearby cell towers)
+- Device sensor activity (movement, orientation)
+- Historical route and travel patterns
+- Real-time weather information
+- Time-based activity patterns (sudden spikes in claims)
+- Battery usage behavior
+- Detection of suspicious group activity (multiple users claiming from same fake zone)
+
+By combining these signals, the system can detect coordinated fraud attempts more effectively.
+
+### 3. UX Balance: Protecting Honest Users
+
+While preventing fraud is important, we also ensure that genuine users are not unfairly affected.
+
+If a claim looks suspicious, it is not immediately rejected. Instead, it is marked for review. Users are given some flexibility in case of network issues or temporary signal loss.
+
+We also provide an option for users to submit additional proof (such as photos) if needed. Based on a confidence score, claims are either approved instantly, delayed for verification, or sent for manual review.
+
+In rare cases, human intervention is available to resolve edge cases.
+
+### Final Note
+
+Our goal is to build a system that is both secure and fair — preventing misuse while maintaining trust with genuine delivery partners. By combining multiple data sources, intelligent analysis, and user-friendly workflows, we create a more resilient and reliable platform.
