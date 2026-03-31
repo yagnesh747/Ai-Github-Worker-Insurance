@@ -93,6 +93,14 @@ This project demonstrates **Zero-Touch Insurance**, a core concept in modern Ins
 
 ---
 
+## 🗺️ Future Roadmap
+- **Live IoT Integration**: Connect to real-time weather stations and GPS trackers to verify labor presence.
+- **Predictive Analytics**: Machine learning models to predict risk *before* the event occurs (e.g., proactive work shifts).
+- **Blockchain Payouts**: Instant, smart-contract-driven settlements via Ethereum or Polygon.
+- **Micro-Insurance Pools**: Community-driven insurance pools for gig worker cooperatives.
+
+---
+
 ## 📝 Initial Setup Commands (Git)
 If you are uploading this to a new GitHub repository, run:
 
@@ -101,6 +109,6 @@ git init
 git add .
 git commit -m "Initial commit - Zero Touch AI Insurance System"
 git branch -M main
-git remote add origin https://github.com/YOUR_USERNAME/YOUR_REPO_NAME.git
+git remote add origin https://github.com/yagnesh747/Ai-Github-Worker-Insurance.git
 git push -u origin main
 ```
