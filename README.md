@@ -6,6 +6,8 @@
 
 A professional, hackathon-ready insurance automation platform for gig workers. This system **automatically detects income loss events** (weather, work-stoppage) and triggers **zero-touch claims** with AI-driven reasoning—eliminating paperwork and delays.
 
+> **🔗 Live Backend API**: [https://zero-touch-insurance-api.onrender.com](https://zero-touch-insurance-api.onrender.com)
+
 ---
 
 ## 🌟 Key Features
