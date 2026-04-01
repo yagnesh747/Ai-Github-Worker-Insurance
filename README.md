@@ -99,16 +99,5 @@ This project demonstrates **Zero-Touch Insurance**, a core concept in modern Ins
 - **Blockchain Payouts**: Instant, smart-contract-driven settlements via Ethereum or Polygon.
 - **Micro-Insurance Pools**: Community-driven insurance pools for gig worker cooperatives.
 
----
 
-## 📝 Initial Setup Commands (Git)
-If you are uploading this to a new GitHub repository, run:
 
-```bash
-git init
-git add .
-git commit -m "Initial commit - Zero Touch AI Insurance System"
-git branch -M main
-git remote add origin https://github.com/yagnesh747/Ai-Github-Worker-Insurance.git
-git push -u origin main
-```
