@@ -15,8 +15,8 @@ export const getUserContext = async (userId) => {
     return response.json();
 };
 
-export const calculatePremium = async (riskFactor) => {
-    const response = await fetch(`${API_BASE_URL}/calculate-premium?risk_factor=${riskFactor}`);
+export const calculatePremium = async (userId, riskFactor) => {
+    const response = await fetch(`${API_BASE_URL}/calculate-premium?user_id=${userId}&risk_factor=${riskFactor}`);
     return response.json();
 };
 
