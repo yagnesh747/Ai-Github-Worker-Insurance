@@ -13,10 +13,11 @@ A professional, hackathon-ready insurance automation platform for gig workers. T
 ## 🌟 Key Features
 
 - **Automated Claims Engine**: Zero-form submission. Claims are detected via telemetry and auto-approved instantly.
-- **AI Risk Scoring**: Dynamic premium adjustment based on real-time environmental factors, location, and job type.
-- **Transparent Reasoning**: Every claim includes an "AI Reasoning" log explaining the logic behind the approval.
-- **Modern UI/UX**: Professional dark-theme dashboard with glassmorphism, animated risk meters, and live claim history.
-- **Simulation Suite**: Built-in event simulators to demonstrate heavy rain, flood alerts, and work-stoppage scenarios.
+- **Income Prediction Engine**: (NEW) AI models predict weekly income based on job type and past activity to calculate precise disruption payouts.
+- **Worker Trust Score**: (NEW) A dynamic 0–100% score that rewards consistent workers with lower premiums and faster processing.
+- **Explainable AI (XAI) Matrix**: (ENHANCED) Every claim includes a deep-dive "AI Reasoning" panel showing rain probability, flood risk, and AI confidence levels.
+- **Modern UI/UX**: Professional dark-theme dashboard with glassmorphism, trust badges, and income projection cards.
+- **Simulation Suite**: Enhanced simulators for "Heavy Rain" and "Market Drop" that demonstrate real-time income loss and automated recovery.
 
 ---
 
@@ -25,23 +26,16 @@ A professional, hackathon-ready insurance automation platform for gig workers. T
 ```text
 zero-touch-insurance/
 ├── backend/               # FastAPI Backend
-│   ├── app/
-│   │   ├── core/          # Risk Engine & Constants
-│   │   ├── models/        # Pydantic Schemas
-│   │   ├── routes/        # API Endpoints
-│   │   └── main.py        # App Entry Point
-│   ├── .env.example
-│   ├── .gitignore
+│   ├── database.py        # MongoDB Connection
+│   ├── models.py          # Pydantic Schemas
+│   ├── main.py            # AI Risk & Prediction Logic
 │   └── requirements.txt
 └── frontend/              # React (Vite) Frontend
     ├── src/
-    │   ├── components/    # Reusable UI Components
-    │   ├── pages/         # Dashboard & Register Pages
-    │   ├── services/      # Axios API Layer
+    │   ├── pages/         # Dashboard, Claims, Policy Hub
+    │   ├── api.js         # API Integration Layer
     │   └── App.jsx        # Routing Logic
-    ├── .env.example
-    ├── .gitignore
-    ├── index.html
+    ├── index.css          # Glassmorphic Design System
     └── package.json
 ```
 
@@ -52,6 +46,7 @@ zero-touch-insurance/
 ### 1. Prerequisites
 - Python 3.9+ 
 - Node.js 18+
+- MongoDB (Running locally at `mongodb://localhost:27017`)
 
 ### 2. Backend Setup
 ```bash
@@ -63,7 +58,7 @@ python -m venv venv
 source venv/bin/activate
 
 pip install -r requirements.txt
-python -m uvicorn app.main:app --reload --port 8000
+uvicorn main:app --reload --port 8000
 ```
 *API will be available at [http://localhost:8000](http://localhost:8000)*
 
@@ -79,27 +74,26 @@ npm run dev
 
 ## 🎮 How to Demo
 
-1. **Register**: Navigate to the registration page and create a profile (try "Construction Worker" in a "Coastal Area" for higher initial risk).
-2. **Dashboard**: View your policy status, dynamic premium, and AI risk score.
-3. **Simulate**: Click any of the simulator buttons in the "Demo Simulation Controls" panel.
-4. **Watch**: 
-   - **Step 1**: "Analyzing Risk..." appears while the AI engine evaluates the event.
-   - **Step 2**: "Claim Approved" overlay shows the payout and the **AI Reasoning**.
-   - **Step 3**: Dashboard stats (Premium, Risk Score) update automatically.
-   - **Step 4**: The claim is added to the live history table.
+1. **Register**: Create a profile (e.g., "Delivery Partner" or "Driver").
+2. **Dashboard**: Observe your **Predicted Weekly Income** and **Worker Trust Score**.
+3. **Smart Policy**: Activate a policy to see how trust scores affect your weekly premium.
+4. **Auto-Claim Simulation**: Navigate to the "AI Auto-Claims" tab.
+   - Click **"Heavy Rain"**: The system detects an 80% income drop.
+   - **XAI Matrix**: Expand the claim to see the raw AI reasoning (Rain Prob, Flood Risk, Confidence).
+5. **Impact**: Watch your Earnings Protected status update as the AI automatically credits the loss.
 
 ---
 
 ## 🛡️ Hackathon Focus
-This project demonstrates **Zero-Touch Insurance**, a core concept in modern InsurTech that leverages IoT and AI to provide instant relief to vulnerable workers without the friction of traditional insurance bureaucracy.
+This project demonstrates **Zero-Touch Insurance**, leveraging AI and Big Data to provide instant financial relief to gig workers. It solves the "Disruption Gap" by using income prediction to replace lost earnings without manual claim filing.
 
 ---
 
 ## 🗺️ Future Roadmap
-- **Live IoT Integration**: Connect to real-time weather stations and GPS trackers to verify labor presence.
-- **Predictive Analytics**: Machine learning models to predict risk *before* the event occurs (e.g., proactive work shifts).
+- **Live IoT Integration**: Connect to real-time weather stations and GPS trackers.
 - **Blockchain Payouts**: Instant, smart-contract-driven settlements via Ethereum or Polygon.
 - **Micro-Insurance Pools**: Community-driven insurance pools for gig worker cooperatives.
+- **Global Deployment**: Multi-currency and multi-region risk profiles.
 
 
 
